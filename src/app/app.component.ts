@@ -9,16 +9,13 @@ declare var OzLiveness: any;
 export class AppComponent implements OnInit {
   title = 'angular-oz';
 
-  ngOnInit() {
-    this.openCamera()
-  }
+  ngOnInit() { }
 
   openCamera() {
-    const session = new Date;
-
     OzLiveness.open({
       lang: 'en',
-      token: 'f95e368b4252a066aeb947120598b3be0f6954aff1f397d1dc571630e6e7d3b71e9449a50d0c802eca16f2bb57544bffcc54aecb18bb56aa890af2b7a91640d9',
+      token: '256fa59faef20ed34496190c4c8d9de2fd0ff8cddd90b358f57c89e75ccd003deb6ad1c0443485cd4ecb95d3a0cedc4a67fba246d2a4f5d6eac497127a5f7f32',
+      action: ['photo_id_front', 'photo_id_back', 'video_selfie_scan'],
       on_complete: function () {
         alert('Human');
       }
