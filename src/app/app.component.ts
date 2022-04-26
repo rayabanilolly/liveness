@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 declare var OzLiveness: any;
 
 @Component({
@@ -6,16 +6,15 @@ declare var OzLiveness: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'angular-oz';
 
-  ngOnInit() { }
-
   openCamera() {
+    console.log('button clicked');
+
     OzLiveness.open({
       lang: 'en',
-      token: '256fa59faef20ed34496190c4c8d9de2fd0ff8cddd90b358f57c89e75ccd003deb6ad1c0443485cd4ecb95d3a0cedc4a67fba246d2a4f5d6eac497127a5f7f32',
-      action: ['photo_id_front', 'photo_id_back', 'video_selfie_scan'],
+      token: '84b10f0fe3151418daba2efe017cc97fb2a290cfe1952b545c1f9bb5163acba34112890d6c293b55d96a3dcbc2b286828bcf5636c534985686697df3b6fd21cd',
       on_complete: function () {
         alert('Human');
       }
