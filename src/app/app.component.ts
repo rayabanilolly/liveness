@@ -12,7 +12,7 @@ export class AppComponent {
   openCamera() {
     OzLiveness.open({
       lang: 'en',
-      token: '5f6dd74ec937171541b992b7f6d21dff1cbdc9a516bb511f7152fbdb751c590277e5cd99fc1980168675fb56c2d586f250d7e0ab276bc7a8dec86d0e5b5b176b',
+      token: 'c81ba7ff9174e79271570eba350217c5c777cbc3e1acf264769663c1eacfcc11702c04482b0fa9607c51ec73db972504f286c84dcce0ffeed0338a02439afe6f',
       on_complete: function (result: any) {
         console.log(result)
       }
